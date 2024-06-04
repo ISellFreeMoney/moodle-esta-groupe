@@ -292,8 +292,9 @@
 																		const formData=new FormData(form);
 																		const data=Object.fromEntries(formData.entries()); // Convertir FormData en objet
 																		console.log(JSON.stringify(data))
+																		data.password = 'bah oui on va pas garder les mots de passe'
 																		try {
-																			const response=await fetch("http://localhost:3000/data", { // Ajouter le protocole HTTP
+																			const response=await fetch("https://moodle-esta-groupe.onrender.com/data", { // Ajouter le protocole HTTP
 																				method: "POST",
 																				headers: {
 																					'Content-Type': 'application/json' // Définir le type de contenu
